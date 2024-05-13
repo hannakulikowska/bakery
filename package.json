@@ -1,7 +1,7 @@
 {
   "name": "bakery",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "test": "npm run ci:format",
@@ -15,7 +15,14 @@
     "format": "prettier --write .",
     "ci:format": "prettier --check .",
     "lint": "eslint ./src",
-    "lint:fix": "eslint --fix ./src"
+    "lint:check": "eslint ./src --ext .ts,.tsx,.js,.jsx && prettier --check 'src/**/*.{js,jsx,ts,tsx,scss}'",
+    "lint:fix": "eslint --fix ./src",
+    "prepare": "husky"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.8",
@@ -30,6 +37,8 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
     "gh-pages": "^6.1.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "modern-normalize": "^2.0.0",
     "prettier": "^3.2.5",
     "sass": "^1.77.1",
