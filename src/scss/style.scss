@@ -48,3 +48,14 @@
 .custom-toggler[aria-expanded='true'] .custom-toggler-icon::after {
   left: auto;
 }
+
+/* Hero section */
+
+.hero__img-wrapper {
+  overflow: hidden;
+}
+
+.hero__img {
+  transform: translate(2%, 3%) scaleX(-1);
+  scale: 1.2;
+}
