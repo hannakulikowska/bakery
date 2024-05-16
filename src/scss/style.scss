@@ -74,6 +74,12 @@ body::before {
   transform: translateY(-2px);
 }
 
+/* Read More Buttons */
+
+.read-more-btn[aria-expanded='true'] .bi-arrow-right {
+  display: none;
+}
+
 /* Subscription section */
 
 @media screen and (min-width: 768px) {
