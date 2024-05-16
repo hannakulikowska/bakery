@@ -75,3 +75,13 @@ body::before {
     width: 50%;
   }
 }
+
+/* Accordeon */
+
+.accordion-button:not(.collapsed) {
+  background-color: $light;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
