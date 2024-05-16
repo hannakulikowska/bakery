@@ -1,3 +1,50 @@
 @import '~modern-normalize/modern-normalize';
 @import '~bootstrap/scss/bootstrap';
-@import 'custom-theme-colors';
+@import '~bootstrap-icons/font/bootstrap-icons.min.css';
+
+/* Hamburger */
+
+.custom-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.custom-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.custom-toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: $light;
+  position: relative;
+  display: block;
+}
+
+.custom-toggler-icon::before,
+.custom-toggler-icon::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: $light;
+  position: absolute;
+}
+
+.custom-toggler-icon::before {
+  top: -8px;
+}
+
+.custom-toggler-icon::after {
+  top: 8px;
+}
+
+.custom-toggler[aria-expanded='false'] .custom-toggler-icon::before,
+.custom-toggler[aria-expanded='false'] .custom-toggler-icon::after {
+  left: 0;
+}
+
+.custom-toggler[aria-expanded='true'] .custom-toggler-icon::before,
+.custom-toggler[aria-expanded='true'] .custom-toggler-icon::after {
+  left: auto;
+}

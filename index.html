@@ -4,11 +4,51 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bakery</title>
+    <meta
+      name="description"
+      content="Start your journey towards a rewarding career in web development. Join our comprehensive program designed to equip you with the skills and knowledge needed to excel in the tech industry."
+    />
+    <title>Webcoder | Become a Web Developer</title>
   </head>
 
   <body>
-    <div class="container"></div>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-3">
+        <div class="container-xxl">
+          <a href="/" class="navbar-brand text-uppercase">
+            <i class="bi bi-code-slash me-1"></i>
+            Webcoder
+          </a>
+
+          <button
+            class="navbar-toggler custom-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+            aria-controls="navmenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="custom-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav gap-2 ms-auto mt-4 mt-sm-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#learn">What You Will Master</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#questions">Questions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#mentors">Mentors</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <script type="module" src="./src/ts/main.ts"></script>
   </body>
 </html>
