@@ -68,6 +68,12 @@ body::before {
   scale: 1.2;
 }
 
+/* Arrow Icon */
+
+.bi-arrow-right {
+  transform: translateY(-2px);
+}
+
 /* Subscription section */
 
 @media screen and (min-width: 768px) {
@@ -84,4 +90,24 @@ body::before {
 
 .accordion-button:focus {
   box-shadow: none;
+}
+
+/* Mentors cards */
+
+.list-group-item {
+  border: none;
+}
+
+.list-group-item a:hover i {
+  color: $primary;
+}
+
+/* Social icons*/
+
+i::before {
+  transition: 0.5s;
+}
+
+.list-group-item:hover i::before {
+  color: $primary;
 }
