@@ -134,3 +134,13 @@ i::before {
   height: 100%;
   border: 0;
 }
+
+footer p,
+footer p a {
+  color: #ffffff8c;
+  transition: color 0.5s ease;
+}
+
+footer p a:hover {
+  color: $primary;
+}
