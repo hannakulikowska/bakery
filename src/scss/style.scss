@@ -111,3 +111,26 @@ i::before {
 .list-group-item:hover i::before {
   color: $primary;
 }
+
+/* Contact */
+
+.contact .list-group-item {
+  padding-left: 0;
+}
+
+.contact__map-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.contact__map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
