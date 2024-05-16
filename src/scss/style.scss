@@ -59,3 +59,11 @@
   transform: translate(2%, 3%) scaleX(-1);
   scale: 1.2;
 }
+
+/* Subscription section */
+
+@media screen and (min-width: 768px) {
+  .subscription__input {
+    width: 50%;
+  }
+}
