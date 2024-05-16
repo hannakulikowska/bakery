@@ -1,5 +1,5 @@
 {
-  "name": "bakery",
+  "name": "webcoder",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -44,5 +44,8 @@
     "sass": "^1.77.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3"
   }
 }

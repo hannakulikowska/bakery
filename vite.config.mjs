@@ -5,9 +5,9 @@ export default defineConfig(({ mode }) => {
   let base = '/';
 
   if (mode === 'production') {
-    base = '/bakery/';
+    base = '/webcoder/';
   } else if (mode === 'wordpress') {
-    base = '/wp-content/themes/bakery/';
+    base = '/wp-content/themes/webcoder/';
   }
 
   return {
@@ -16,6 +16,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
+        '~bootstrap-icons': path.resolve(__dirname, 'node_modules/bootstrap-icons'),
         '~modern-normalize': path.resolve(__dirname, 'node_modules/modern-normalize'),
       },
     },
