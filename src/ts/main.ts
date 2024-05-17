@@ -26,4 +26,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach((formElement) => {
+    const form = formElement as HTMLFormElement;
+    form.addEventListener(
+      'submit',
+      (event) => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add('was-validated');
+      },
+      false
+    );
+  });
+
+  const submitButton = document.getElementById('submit-btn');
+  if (submitButton) {
+    submitButton.addEventListener('click', () => {
+      const form = document.getElementById('enroll-form') as HTMLFormElement;
+      if (form) {
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+        } else {
+          form.submit();
+        }
+      }
+    });
+  }
 });

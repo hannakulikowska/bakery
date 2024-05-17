@@ -587,28 +587,40 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="">
+            <form id="enroll-form" class="needs-validation" novalidate>
               <div class="mb-3">
                 <label for="first-name" class="col-form-label">First Name</label>
-                <input type="text" class="form-control" id="first-name" />
+                <input type="text" class="form-control" id="first-name" required pattern="^[a-zA-Z\s]{2,}$" />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid first name.</div>
               </div>
               <div class="mb-3">
                 <label for="last-name" class="col-form-label">Last Name</label>
-                <input type="text" class="form-control" id="last-name" />
+                <input type="text" class="form-control" id="last-name" required pattern="^[a-zA-Z\s]{2,}$" />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid last name.</div>
               </div>
               <div class="mb-3">
                 <label for="phone" class="col-form-label">Phone</label>
-                <input type="text" class="form-control" id="phone" />
+                <input type="text" class="form-control" id="phone" required pattern="^\d{10}$" />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid phone number (10 digits).</div>
               </div>
               <div class="mb-3">
                 <label for="email" class="col-form-label">Email</label>
-                <input type="text" class="form-control" id="email" />
+                <input type="email" class="form-control" id="email" required />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid email address.</div>
+              </div>
+              <div class="mb-3">
+                <label for="city" class="col-form-label">City (optional)</label>
+                <input type="text" class="form-control" id="city" />
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" id="submit-btn">Submit</button>
           </div>
         </div>
       </div>
