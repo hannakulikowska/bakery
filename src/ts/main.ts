@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const submitButton = document.getElementById('submit-btn');
   if (submitButton) {
-    submitButton.addEventListener('click', () => {
+    submitButton.addEventListener('click', (event) => {
+      event.preventDefault();
       const form = document.getElementById('enroll-form') as HTMLFormElement;
       if (form) {
         if (!form.checkValidity()) {
