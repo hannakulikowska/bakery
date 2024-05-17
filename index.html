@@ -8,7 +8,7 @@
       name="description"
       content="Start your journey towards a rewarding career in web development. Join our comprehensive program designed to equip you with the skills and knowledge needed to excel in the tech industry."
     />
-    <title>Webcoder | Become a Web Developer</title>
+    <title>Webcoder. Become a Web Developer</title>
   </head>
 
   <body>
@@ -58,7 +58,9 @@
               Start your journey towards a rewarding career in web development. Join our comprehensive program designed
               to equip you with the skills and knowledge needed to excel in the tech industry.
             </p>
-            <a type="button" class="btn btn-primary btn-lg">Start The Enrollment</a>
+            <a type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll"
+              >Start The Enrollment</a
+            >
           </div>
           <div class="img-fluid w-100 d-none d-md-block hero__img-wrapper">
             <img src="./src/assets/svg/developer.svg" class="hero__img" alt="" />
@@ -570,11 +572,47 @@
             >Full Development</a
           >
         </p>
-        <a href="#" class="position-absolute bottom-0 end-0 px-5 py-4">
+        <a href="#" class="position-absolute bottom-0 end-0 px-2 px-sm-4 px-md-5 py-4">
           <i class="bi bi-arrow-up-circle h1"></i>
         </a>
       </div>
     </footer>
+
+    <!-- Enroll Modal -->
+    <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="enrollLabel">Fill out this form and we will get back to you</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label">First Name</label>
+                <input type="text" class="form-control" id="first-name" />
+              </div>
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">Last Name</label>
+                <input type="text" class="form-control" id="last-name" />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone</label>
+                <input type="text" class="form-control" id="phone" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email</label>
+                <input type="text" class="form-control" id="email" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="./src/ts/main.ts"></script>
   </body>
