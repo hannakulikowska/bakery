@@ -1,6 +1,19 @@
 import '../scss/style.scss';
 import 'bootstrap';
 
+// Preloader;
+const spinner = document.getElementById('spinner') as HTMLElement;
+const content = document.getElementById('content') as HTMLElement;
+
+window.addEventListener('load', () => {
+  spinner.style.opacity = '0';
+
+  spinner.addEventListener('transitionend', () => {
+    document.body.removeChild(spinner);
+    content.style.display = 'block';
+  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const yearElement = document.getElementById('year');
   if (yearElement) {
