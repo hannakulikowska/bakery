@@ -112,6 +112,10 @@ body::before {
   box-shadow: none;
 }
 
+.accordion-button::after {
+  margin-left: 0.5rem;
+}
+
 /* Mentors cards */
 
 .list-group-item {
