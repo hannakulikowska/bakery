@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Start your journey towards a rewarding career in web development. Join our comprehensive program designed to equip you with the skills and knowledge needed to excel in the tech industry."
+    />
+    <title>Webcoder. Become a Web Developer</title>
+  </head>
+
+  <body>
+    <!-- Spinner -->
+    <div id="spinner" class="d-flex justify-content-center align-items-center">
+      <div class="spinner-border text-warning" style="width: 4rem; height: 4rem" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div id="content">
+      <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-3 fixed-top">
+          <div class="container-xxl">
+            <a href="/" class="navbar-brand text-uppercase">
+              <i class="bi bi-code-slash me-1"></i>
+              Webcoder
+            </a>
+
+            <button
+              class="navbar-toggler custom-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navmenu"
+              aria-controls="navmenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="custom-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+              <ul class="navbar-nav gap-2 ms-auto mt-4 mt-sm-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#learn">What You Will Master</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#questions">Questions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#mentors">Mentors</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero bg-dark text-light px-2 py-5 pb-lg-0 text-center text-sm-start">
+          <div class="container-xxl">
+            <div class="d-sm-flex align-items-center justify-content-between gap-md-5">
+              <div>
+                <h1>Become a <span class="text-warning">Web Developer</span></h1>
+                <p class="lead my-4">
+                  Start your journey towards a rewarding career in web development. Join our comprehensive program
+                  designed to equip you with the skills and knowledge needed to excel in the tech industry.
+                </p>
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">
+                  Start The Enrollment
+                </button>
+              </div>
+              <div class="img-fluid w-100 d-none d-md-block hero__img-wrapper">
+                <img src="./src/assets/svg/developer.svg" class="hero__img" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subscription bg-primary text-light px-2 py-5">
+          <div class="container-xxl">
+            <div class="d-md-flex justify-content-between align-items-center">
+              <h3 class="mb-3 mb-md-0">Sign up for our newsletter!</h3>
+
+              <form id="subscribtion-form" class="needs-validation" novalidate>
+                <div class="input-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter e-mail"
+                    required
+                    pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+                  />
+
+                  <div class="valid-feedback text-light text-opacity-75 text-start">Looks good!</div>
+                  <div class="invalid-feedback text-light text-opacity-75 text-start">
+                    Please provide a valid email address.
+                  </div>
+                  <button id="subscribe-btn" class="btn btn-dark btn-lg" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="cards px-2 py-5">
+          <div class="container-xxl">
+            <div class="row text-center g-4">
+              <div class="col-md">
+                <div class="card h-100 bg-dark text-light">
+                  <div class="card-body d-flex flex-column align-items-center text-center">
+                    <div class="h1 mb-3">
+                      <i class="bi bi-laptop h1"></i>
+                    </div>
+                    <h3 class="card-title text-capitalize">Online learning</h3>
+                    <div class="flex-grow-1">
+                      <p class="card-text">
+                        Experience the flexibility of learning from anywhere with our virtual classes. Engage with
+                        instructors and peers in real-time through our interactive online platform.
+                      </p>
+                      <div class="collapse" id="fulltext1">
+                        <p>
+                          Our online environment is designed to provide you with the same quality education as in-person
+                          classes. Stay connected and motivated with a supportive online community.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="btn btn-primary mb-2 text-capitalize read-more-btn"
+                      role="button"
+                      data-bs-toggle="collapse"
+                      href="#fulltext1"
+                      aria-expanded="false"
+                      aria-controls="fulltext"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card h-100 bg-secondary text-light">
+                  <div class="card-body d-flex flex-column align-items-center text-center">
+                    <div class="h1 mb-3">
+                      <i class="bi bi-bezier h1"></i>
+                    </div>
+                    <h3 class="card-title text-capitalize">Blended learning</h3>
+                    <div class="flex-grow-1">
+                      <p class="card-text">
+                        Combine the best of both worlds with our hybrid learning format. Enjoy the convenience of online
+                        classes while benefiting from in-person sessions for hands-on practice and networking.
+                      </p>
+                      <div class="collapse" id="fulltext2">
+                        <p>
+                          This approach ensures you get the flexibility of remote learning and the tangible benefits of
+                          face-to-face interactions. Balance your studies with your personal and professional life
+                          seamlessly.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="btn btn-primary mb-2 text-capitalize read-more-btn"
+                      role="button"
+                      data-bs-toggle="collapse"
+                      href="#fulltext2"
+                      aria-expanded="false"
+                      aria-controls="fulltext"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card h-100 bg-dark text-light">
+                  <div class="card-body d-flex flex-column align-items-center text-center">
+                    <div class="h1 mb-3">
+                      <i class="bi bi-people h1"></i>
+                    </div>
+                    <h3 class="card-title text-capitalize">On-campus learning</h3>
+                    <div class="flex-grow-1">
+                      <p class="card-text">
+                        Immerse yourself fully in our in-person classes. Get direct access to instructors, collaborate
+                        with classmates, and take advantage of our state-of-the-art facilities.
+                      </p>
+                      <div class="collapse" id="fulltext3">
+                        <p>
+                          Experience a rich campus life that fosters collaboration and innovation. Take part in
+                          extracurricular activities and build a network that lasts a lifetime.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="btn btn-primary mb-2 text-capitalize read-more-btn"
+                      role="button"
+                      data-bs-toggle="collapse"
+                      href="#fulltext3"
+                      aria-expanded="false"
+                      aria-controls="fulltext"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="learn" class="px-2 py-5">
+          <div class="container-xxl">
+            <div class="row align-items-start justify-content-between">
+              <div class="col-md">
+                <img src="./src/assets/svg/development.svg" class="img-fluid" alt="" />
+              </div>
+              <div class="col-md">
+                <h2 class="text-capitalize mt-md-4 pt-md-2">Build your foundation</h2>
+                <p class="lead">
+                  Master the essential building blocks of web development with our comprehensive foundational course.
+                  Gain a solid understanding of HTML, CSS, and JavaScript through hands-on projects and interactive
+                  lessons.
+                </p>
+                <div class="collapse" id="fulltext4">
+                  <p>
+                    Our curriculum is designed to equip you with the skills necessary to create responsive, visually
+                    appealing, and functional websites from scratch. Start your journey towards becoming a proficient
+                    web developer today.
+                  </p>
+                </div>
+                <a
+                  class="btn btn-dark mt-3 text-capitalize icon-link icon-link-hover read-more-btn"
+                  role="button"
+                  data-bs-toggle="collapse"
+                  href="#fulltext4"
+                  aria-expanded="false"
+                  aria-controls="fulltext"
+                  style="--bs-icon-link-transform: translate(0.5rem, -2px)"
+                >
+                  Read more
+                  <i class="bi bi-arrow-right m-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="learn" class="px-2 py-5 bg-dark text-light">
+          <div class="container-xxl">
+            <div class="row align-items-start justify-content-between">
+              <div class="col-md order-md-1">
+                <img src="./src/assets/svg/frameworks.svg" class="img-fluid" alt="" />
+              </div>
+              <div class="col-md order-md-0">
+                <h2 class="text-capitalize mt-md-4 pt-md-2">Explore modern tools</h2>
+                <p class="lead">
+                  Dive into the world of modern web development with our in-depth courses on Vue, React, and Angular.
+                  Learn how to build dynamic and high-performance applications using the latest industry-standard tools.
+                </p>
+                <div class="collapse" id="fulltext5">
+                  <p>
+                    Our expert instructors will guide you through the intricacies of each technology, from setup to
+                    advanced features. Whether you prefer the simplicity of Vue, the flexibility of React, or the robust
+                    architecture of Angular, we have the right course for you.
+                  </p>
+                </div>
+                <a
+                  class="btn btn-light mt-3 text-capitalize icon-link icon-link-hover read-more-btn"
+                  role="button"
+                  data-bs-toggle="collapse"
+                  href="#fulltext5"
+                  aria-expanded="false"
+                  aria-controls="fulltext"
+                  style="--bs-icon-link-transform: translate(0.5rem, -2px)"
+                >
+                  Read more
+                  <i class="bi bi-arrow-right m-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="questions" class="px-2 py-5">
+          <div class="container-xxl">
+            <h2 class="text-center mb-4 mt-4 text-capitalize">Frequently ask questions</h2>
+
+            <div class="accordion accordion-flush" id="accordion-questions">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed px-0 justify-content-between"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    How long do the courses last?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordion-questions"
+                >
+                  <div class="accordion-body">
+                    The duration of the courses varies depending on their complexity and content. The courses typically
+                    last about 4-12 months.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed px-0 justify-content-between"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Can I learn at my own pace?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordion-questions"
+                >
+                  <div class="accordion-body">
+                    Yes, Webcoder offers courses with flexible schedules, allowing you to learn at your own pace. You
+                    can watch lectures, complete assignments, and take quizzes whenever it suits you.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed px-0 justify-content-between"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Do I need previous programming experience?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordion-questions"
+                >
+                  <div class="accordion-body">
+                    No, our courses are suitable for all levels, from beginners to experienced developers. If you have
+                    no programming experience, we recommend starting with our basic courses to learn the fundamentals
+                    before moving on to more advanced topics.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button
+                    class="accordion-button collapsed px-0 justify-content-between"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    Are certificates provided upon course completion?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFour"
+                  data-bs-parent="#accordion-questions"
+                >
+                  <div class="accordion-body">
+                    Yes, upon completing a course and subject to passing all examination tests, as well as successful
+                    completion of the final technical interview, you will receive a certificate that validates your
+                    knowledge and skills. These certificates can be added to your resume or LinkedIn profile to showcase
+                    your achievements to potential employers.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                  <button
+                    class="accordion-button collapsed px-0 justify-content-between"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    Is there student support available?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFive"
+                  data-bs-parent="#accordion-questions"
+                >
+                  <div class="accordion-body">
+                    Yes, we offer 24/7 support for our students. You can ask questions through our chat with mentors, or
+                    contact our support team for help with any issues related to your learning experience.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="mentors" class="px-2 py-5 bg-primary">
+          <div class="container-xxl">
+            <h2 class="text-center text-white mt-4 mb-4">Mentors</h2>
+            <p class="lead text-center text-white mb-5">
+              Our mentors are experienced professionals in the field of web development, dedicated to guiding you
+              through your learning journey. With 5+ years of industry expertise, they provide valuable insights,
+              personalized feedback, and practical advice to help you succeed. Whether you're a beginner or an advanced
+              learner, our mentors are here to support you every step of the way, ensuring you gain the skills and
+              confidence needed to excel in your web development career.
+            </p>
+
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-3">
+                <div class="card h-100 bg-light">
+                  <div class="card-body text-center d-flex flex-column align-items-center">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/9.jpg"
+                      alt="Portrait of a mentor"
+                      class="rounded-circle mb-3"
+                    />
+                    <h3 class="card-title mb-3">Liam Johnson</h3>
+                    <p class="card-text flex-grow-1">
+                      Liam Johnson is an expert in back-end development and cybersecurity. With over 12 years in the
+                      industry, Liam has a deep understanding of server-side programming, database architecture, and
+                      network security.
+                    </p>
+                    <ul class="list-group flex-nowrap flex-row justify-content-center mt-auto">
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-twitter text-dark"></i
+                        ></a>
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-telegram text-dark"></i
+                        ></a>
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-instagram text-dark"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="card h-100 bg-light">
+                  <div class="card-body text-center d-flex flex-column align-items-center">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/11.jpg"
+                      alt="Portrait of a mentor"
+                      class="rounded-circle mb-3"
+                    />
+                    <h3 class="card-title mb-3">Sophia Ramirez</h3>
+                    <p class="card-text flex-grow-1">
+                      Sophia Ramirez brings a wealth of knowledge in UX/UI design and front-end development. With her
+                      innovative approach and creative mindset, Sophia has helped numerous startups build intuitive and
+                      engaging user interfaces.
+                    </p>
+                    <ul class="list-group flex-nowrap flex-row justify-content-center mt-auto">
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-linkedin text-dark"></i
+                        ></a>
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-telegram text-dark"></i
+                        ></a>
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-instagram text-dark"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="card h-100 bg-light">
+                  <div class="card-body text-center d-flex flex-column align-items-center">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/28.jpg"
+                      alt="Portrait of a mentor"
+                      class="rounded-circle mb-3"
+                    />
+                    <h3 class="card-title mb-3">Ethan Carter</h3>
+                    <p class="card-text flex-grow-1">
+                      Ethan Carter is a full-stack developer with a passion for teaching and a knack for solving complex
+                      problems. With a background in computer science and over a decade of hands-on experience, Ethan is
+                      well-versed in both front-end and back-end technologies.
+                    </p>
+                    <ul class="list-group flex-nowrap flex-row justify-content-center mt-auto">
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-linkedin text-dark"></i
+                        ></a>
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-telegram text-dark"></i
+                        ></a>
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-instagram text-dark"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="card h-100 bg-light">
+                  <div class="card-body text-center d-flex flex-column align-items-center">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/57.jpg"
+                      alt="Portrait of a mentor"
+                      class="rounded-circle mb-3"
+                    />
+                    <h3 class="card-title mb-3">Olivia Bennett</h3>
+                    <p class="card-text flex-grow-1">
+                      Olivia Bennett is a seasoned web developer with over 15 years of experience in the tech industry.
+                      Specializing in front-end development, Olivia has a keen eye for design and usability.
+                    </p>
+                    <ul class="list-group flex-nowrap flex-row justify-content-center mt-auto">
+                      <li class="list-group-item bi-icon bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-facebook text-dark"></i>
+                        </a>
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-telegram text-dark"></i
+                        ></a>
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="bi bi-instagram text-dark"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact px-2 py-5">
+          <div class="container-xxl">
+            <div class="row g-4">
+              <div class="col-lg">
+                <h2 class="text-left h2 mb-4">Contact</h2>
+                <ul class="list-group list-group-flush lead">
+                  <li class="list-group-item">
+                    <span class="fw-bold">Location:</span>
+                    Santa Monica CA, USA
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Phone:</span>
+                    <a class="text-decoration-none text-dark" href="tel:+1851523654">(185)&nbsp;152-3654</a>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Email:</span>
+                    <a class="text-decoration-none text-dark" href="mailto:webcoder@gmail.com">info@webcoder.com</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-9 text-end">
+                <div class="contact__map-wrapper">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26454.851963422592!2d-118.50139793649265!3d34.0218943452028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4cec2910019%3A0xb4170ab5ff23f5ab!2sSanta%20Monica%2C%20CA%2C%20USA!5e0!3m2!1sen!2spl!4v1715879768442!5m2!1sen!2spl"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="pe-5 ps-0 px-md-2 py-4 bg-dark text-start text-md-center position-relative">
+        <div class="container-xxl">
+          <p class="mb-0">&copy; 2022-<span id="year"></span> Webcoder. All rights reserved.</p>
+          <p class="mb-0">
+            Website by
+            <a class="text-decoration-none" href="https://fulldev.com" target="_blank" rel="noopener noreferrer"
+              >Full Development</a
+            >
+          </p>
+          <a href="#" class="position-absolute bottom-0 end-0 px-2 px-sm-4 px-md-5 py-4">
+            <i class="bi bi-arrow-up-circle h1"></i>
+          </a>
+        </div>
+      </footer>
+
+      <!-- Enroll Modal -->
+      <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="enrollLabel">Fill out this form and we will get back to you</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="enroll-form" class="needs-validation" novalidate>
+                <div class="mb-3">
+                  <label for="first-name" class="col-form-label">First Name</label>
+                  <input type="text" class="form-control" id="first-name" required pattern="^[a-zA-Z\s]{2,}$" />
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please provide a valid first name.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="last-name" class="col-form-label">Last Name</label>
+                  <input type="text" class="form-control" id="last-name" required pattern="^[a-zA-Z\s]{2,}$" />
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please provide a valid last name.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="col-form-label">Phone</label>
+                  <input type="text" class="form-control" id="phone" required pattern="^\d{10}$" />
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please provide a valid phone number (10 digits).</div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="col-form-label">Email</label>
+                  <input type="email" class="form-control" id="email" required />
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="city" class="col-form-label">City (optional)</label>
+                  <input type="text" class="form-control" id="city" />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="enroll-btn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/ts/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+@import '~modern-normalize/modern-normalize';
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-icons/font/bootstrap-icons.min.css';
+
+/* Fixed header */
+
+body::before {
+  display: block;
+  content: '';
+  height: 72px;
+}
+
+/* Hamburger */
+
+.custom-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.custom-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.custom-toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: $light;
+  position: relative;
+  display: block;
+}
+
+.custom-toggler-icon::before,
+.custom-toggler-icon::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: $light;
+  position: absolute;
+}
+
+.custom-toggler-icon::before {
+  top: -8px;
+}
+
+.custom-toggler-icon::after {
+  top: 8px;
+}
+
+.custom-toggler[aria-expanded='false'] .custom-toggler-icon::before,
+.custom-toggler[aria-expanded='false'] .custom-toggler-icon::after {
+  left: 0;
+}
+
+.custom-toggler[aria-expanded='true'] .custom-toggler-icon::before,
+.custom-toggler[aria-expanded='true'] .custom-toggler-icon::after {
+  left: auto;
+}
+
+/* Hero section */
+
+.hero__img-wrapper {
+  overflow: hidden;
+}
+
+.hero__img {
+  transform: translate(2%, 3%) scaleX(-1);
+  scale: 1.2;
+}
+
+/* Arrow Icon */
+
+.bi-arrow-right {
+  transform: translateY(-2px);
+}
+
+/* Read More Buttons */
+
+.read-more-btn[aria-expanded='true'] .bi-arrow-right {
+  display: none;
+}
+
+/* Subscription section */
+
+@media screen and (min-width: 768px) {
+  #subscribtion-form {
+    width: 50%;
+  }
+}
+
+.input-group .valid-feedback,
+.input-group .invalid-feedback {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+}
+
+.input-group input:valid + .valid-feedback,
+.input-group input:invalid + .invalid-feedback {
+  display: block;
+}
+
+/* Accordeon */
+
+.accordion-button:not(.collapsed) {
+  background-color: $light;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  margin-left: 0.5rem;
+}
+
+/* Mentors cards */
+
+.list-group-item {
+  border: none;
+}
+
+.list-group-item a:hover i {
+  color: $primary;
+}
+
+/* Social icons*/
+
+i::before {
+  transition: 0.5s;
+}
+
+.list-group-item:hover i::before {
+  color: $primary;
+}
+
+/* Contact */
+
+.contact .list-group-item {
+  padding-left: 0;
+}
+
+.contact__map-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.contact__map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+footer p,
+footer p a {
+  color: #ffffff8c;
+  transition: color 0.5s ease;
+}
+
+footer p a:hover {
+  color: $primary;
+}
+
+/* Spinner */
+
+#spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $light;
+  transition: opacity 0.3s ease;
+}
+
+#content {
+  display: none;
+}
