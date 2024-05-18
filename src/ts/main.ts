@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   });
 
-  const submitButton = document.getElementById('submit-btn');
+  const submitButton = document.getElementById('enroll-btn');
   if (submitButton) {
     submitButton.addEventListener('click', (event) => {
       event.preventDefault();
@@ -71,4 +71,34 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Subscribe Button
+
+  const subscribeButton = document.getElementById('subscribe-btn');
+  if (subscribeButton) {
+    subscribeButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      const form = document.getElementById('subscribtion-form') as HTMLFormElement;
+      if (form) {
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+        } else {
+          form.submit();
+        }
+      }
+    });
+  }
+
+  // Hamburger Menu
+
+  const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (navbarToggler && navbarToggler.getAttribute('aria-expanded') === 'true') {
+        navbarToggler.click();
+      }
+    });
+  });
 });

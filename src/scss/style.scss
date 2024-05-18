@@ -7,7 +7,7 @@
 body::before {
   display: block;
   content: '';
-  height: 60px;
+  height: 72px;
 }
 
 /* Hamburger */
@@ -83,9 +83,23 @@ body::before {
 /* Subscription section */
 
 @media screen and (min-width: 768px) {
-  .subscription__input {
+  #subscribtion-form {
     width: 50%;
   }
+}
+
+.input-group .valid-feedback,
+.input-group .invalid-feedback {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+}
+
+.input-group input:valid + .valid-feedback,
+.input-group input:invalid + .invalid-feedback {
+  display: block;
 }
 
 /* Accordeon */

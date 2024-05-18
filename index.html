@@ -83,10 +83,23 @@
             <div class="d-md-flex justify-content-between align-items-center">
               <h3 class="mb-3 mb-md-0">Sign up for our newsletter!</h3>
 
-              <div class="input-group subscription__input">
-                <input type="text" class="form-control" placeholder="Enter e-mail" />
-                <button class="btn btn-dark btn-lg" type="submit">Subscribe</button>
-              </div>
+              <form id="subscribtion-form" class="needs-validation" novalidate>
+                <div class="input-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter e-mail"
+                    required
+                    pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+                  />
+
+                  <div class="valid-feedback text-light text-opacity-75 text-start">Looks good!</div>
+                  <div class="invalid-feedback text-light text-opacity-75 text-start">
+                    Please provide a valid email address.
+                  </div>
+                  <button id="subscribe-btn" class="btn btn-dark btn-lg" type="submit">Subscribe</button>
+                </div>
+              </form>
             </div>
           </div>
         </section>
@@ -101,15 +114,17 @@
                       <i class="bi bi-laptop h1"></i>
                     </div>
                     <h3 class="card-title text-capitalize">Online learning</h3>
-                    <p class="card-text flex-grow-1">
-                      Experience the flexibility of learning from anywhere with our virtual classes. Engage with
-                      instructors and peers in real-time through our interactive online platform.
-                    </p>
-                    <div class="collapse" id="fulltext1">
-                      <p>
-                        Our online environment is designed to provide you with the same quality education as in-person
-                        classes. Stay connected and motivated with a supportive online community.
+                    <div class="flex-grow-1">
+                      <p class="card-text">
+                        Experience the flexibility of learning from anywhere with our virtual classes. Engage with
+                        instructors and peers in real-time through our interactive online platform.
                       </p>
+                      <div class="collapse" id="fulltext1">
+                        <p>
+                          Our online environment is designed to provide you with the same quality education as in-person
+                          classes. Stay connected and motivated with a supportive online community.
+                        </p>
+                      </div>
                     </div>
                     <a
                       class="btn btn-primary mb-2 text-capitalize read-more-btn"
@@ -132,16 +147,18 @@
                       <i class="bi bi-bezier h1"></i>
                     </div>
                     <h3 class="card-title text-capitalize">Blended learning</h3>
-                    <p class="card-text flex-grow-1">
-                      Combine the best of both worlds with our hybrid learning format. Enjoy the convenience of online
-                      classes while benefiting from in-person sessions for hands-on practice and networking.
-                    </p>
-                    <div class="collapse" id="fulltext2">
-                      <p>
-                        This approach ensures you get the flexibility of remote learning and the tangible benefits of
-                        face-to-face interactions. Balance your studies with your personal and professional life
-                        seamlessly.
+                    <div class="flex-grow-1">
+                      <p class="card-text">
+                        Combine the best of both worlds with our hybrid learning format. Enjoy the convenience of online
+                        classes while benefiting from in-person sessions for hands-on practice and networking.
                       </p>
+                      <div class="collapse" id="fulltext2">
+                        <p>
+                          This approach ensures you get the flexibility of remote learning and the tangible benefits of
+                          face-to-face interactions. Balance your studies with your personal and professional life
+                          seamlessly.
+                        </p>
+                      </div>
                     </div>
                     <a
                       class="btn btn-primary mb-2 text-capitalize read-more-btn"
@@ -164,15 +181,17 @@
                       <i class="bi bi-people h1"></i>
                     </div>
                     <h3 class="card-title text-capitalize">On-campus learning</h3>
-                    <p class="card-text flex-grow-1">
-                      Immerse yourself fully in our in-person classes. Get direct access to instructors, collaborate
-                      with classmates, and take advantage of our state-of-the-art facilities.
-                    </p>
-                    <div class="collapse" id="fulltext3">
-                      <p>
-                        Experience a rich campus life that fosters collaboration and innovation. Take part in
-                        extracurricular activities and build a network that lasts a lifetime.
+                    <div class="flex-grow-1">
+                      <p class="card-text">
+                        Immerse yourself fully in our in-person classes. Get direct access to instructors, collaborate
+                        with classmates, and take advantage of our state-of-the-art facilities.
                       </p>
+                      <div class="collapse" id="fulltext3">
+                        <p>
+                          Experience a rich campus life that fosters collaboration and innovation. Take part in
+                          extracurricular activities and build a network that lasts a lifetime.
+                        </p>
+                      </div>
                     </div>
                     <a
                       class="btn btn-primary mb-2 text-capitalize read-more-btn"
@@ -266,7 +285,7 @@
 
         <section id="questions" class="px-2 py-5">
           <div class="container-xxl">
-            <h2 class="text-center mb-4 text-capitalize">Frequently ask questions</h2>
+            <h2 class="text-center mb-4 mt-4 text-capitalize">Frequently ask questions</h2>
 
             <div class="accordion accordion-flush" id="accordion-questions">
               <div class="accordion-item">
@@ -403,7 +422,7 @@
 
         <section id="mentors" class="px-2 py-5 bg-primary">
           <div class="container-xxl">
-            <h2 class="text-center text-white">Mentors</h2>
+            <h2 class="text-center text-white mt-4 mb-4">Mentors</h2>
             <p class="lead text-center text-white mb-5">
               Our mentors are experienced professionals in the field of web development, dedicated to guiding you
               through your learning journey. With 5+ years of industry expertise, they provide valuable insights,
@@ -654,7 +673,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" id="submit-btn">Submit</button>
+              <button type="button" class="btn btn-primary" id="enroll-btn">Submit</button>
             </div>
           </div>
         </div>
